@@ -1,0 +1,143 @@
+<!--从老师的角度进行课程的修改和删除，在该界面点击之后会跳转到list界面进行处理-->
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title> - 课程信息修改管理界面 - </title>
+ <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+ <meta name="description" content="" />
+ <meta name="keywords" content="" />
+ <style type="text/css">
+  body{
+  font-family: Tahoma,Verdana, Arial, Helvetica, sans-serif;
+  font-size:15px;
+	float:text-align:center;
+	background-image:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515264157662&di=ab16c1614b77790a275046ffe8e07398&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01bddb554cc40f0000007cc28dc2ba.jpg%402o.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+  }
+
+  p, h1, form, button{border:0; margin:0; padding:0;}
+  .spacer{clear:both; height:1px;}
+  /* ———– My Form ———– */
+  .myform{
+   margin:0 auto;
+   width:400px;
+   padding:14px;
+  }
+
+  /* ———– stylized ———– */
+  #stylized{
+   border:solid 2px #b7ddf2;
+   background:#ebf4fb;
+  }
+
+  #stylized h1 {
+   font-size:16px;
+   font-weight:bold;
+   margin-bottom:8px;
+  }
+
+  #stylized p{
+   font-size:12px;
+   color:#666666;
+   margin-bottom:20px;
+   border-bottom:solid 1px #b7ddf2;
+   padding-bottom:10px;
+  }
+
+  #stylized label{
+   display:block;
+   font-weight:bold;
+   text-align:right;
+   width:140px;
+   float:left;
+  }
+
+  #stylized .small{
+   color:#666666;
+   display:block;
+   font-size:11px;
+   font-weight:normal;
+   text-align:right;
+   width:140px;
+  }
+
+  #stylized input{
+   float:left;
+   font-size:15px;
+   padding:4px 2px;
+   border:solid 1px #aacfe4;
+   width:200px;
+   margin:2px 0 20px 10px;
+  }
+
+  #stylized .sub{
+   clear:both;
+   margin-left:150px;
+   width:120px;
+   height:32px;
+   line-height:20px;
+   border:1px solid #8b9c56;
+   background:url("../images/bt_bg.gif") 0px -64px;
+   text-align:center;
+   color:#336600;
+   font-size:15px;
+   font-weight:bold;
+   cursor:pointer;
+  }
+
+  .red{
+   color:#ff0000;
+  }
+  .blue{
+   color:#0000FF;
+  }
+	 
+ </style>
+
+</head>
+<body>
+
+<div id="stylized" class="myform">
+    <form id="form" name="form" action="/courseEdit/{{tc_tno}}/{{tc_cno}}" method="post" >
+        <h1>课程信息修改管理</h1>
+		
+		<label>教师上课时间
+           <span class="small">例：10:20--12:00</span>
+       </label>
+       <input type="text" name="tc_ttime" id="name"  value="{{tc_ttime}}"/>
+		
+		<label>教师上课时间
+           <span class="small">例：星期一</span>
+       </label>
+       <input type="text" name="tc_tday" id="name" value="{{tc_tday}}" />
+		
+		<label>教师上课时间
+           <span class="small">例：1-16周</span>
+       </label>
+       <input type="text" name="tc_tweek" id="name"  value="{{tc_tweek}}"/>
+
+       <label>教师上课地点
+            <span class="small">例：西区第一公教A101</span>
+       </label>
+       <input type="text" name="tc_tplace" id="num" value="{{tc_tplace}}" />
+
+       <input class="sub" type="submit"  value="修改"/>
+	<input class="sub" type="reset" value="重置" name="resetmessage" >
+	<a href="/admin">
+ 	     <input class="sub" type=button value="回到列表" >
+	</a>
+       <div class="spacer"></div>
+
+    </form>
+</div>
+
+ 
+
+</body>
+
+
+</html>
+
