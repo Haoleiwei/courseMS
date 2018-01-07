@@ -1,0 +1,130 @@
+<!--这是从学生的角度进行课程展示的界面-->
+<!--这是从学生的角度进行课程展示的界面-->
+<!DOCTYPE html>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS Tables</title>
+<link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<center><h2>学生课程信息展示</h2></center>
+   <table border=1 cellspacing=0>	
+
+<style type="text/css">
+/* CSS Document */
+
+body {
+ font: normal 15px auto "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+ color: #4f6b72;
+ background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515264157662&di=ab16c1614b77790a275046ffe8e07398&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01bddb554cc40f0000007cc28dc2ba.jpg%402o.jpg')
+}
+
+a {
+ color: #c75f3e;
+}
+
+#mytable {
+ width: 1300px;
+ padding:0;
+ margin: 0;
+}
+
+caption {
+ padding: 0 0 300px 0;
+ width: 900px;  
+ font: italic 100px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+ text-align: right;
+}
+
+th {
+ font: bold 20px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+ color: #4f6b72;
+ border-right: 1px solid #C1DAD7;
+ border-bottom: 1px solid #C1DAD7;
+ border-top: 1px solid #C1DAD7;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ text-align: center;
+ padding: 6px 6px 6px 12px;
+ background: #CAE8EA url(images/bg_header.jpg) no-repeat;
+}
+
+th.nobg {
+ border-top: 0;
+ border-left: 0;
+ border-right: 1px solid #C1DAD7;
+ background: none;
+}
+
+td {
+ border-right: 1px solid #C1DAD7;
+ border-bottom: 1px solid #C1DAD7;
+ background: #fff;
+ font-size:20px;
+ padding: 6px 6px 6px 12px;
+ color: #4f6b72;
+}
+
+
+td.alt {
+ background: #F5FAFA;
+ color: #797268;
+}
+
+th.spec {
+ border-left: 1px solid #C1DAD7;
+ border-top: 0;
+ background: #fff url(images/bullet1.gif) no-repeat;
+ font: bold 20px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+}
+
+th.specalt {
+ border-left: 1px solid #C1DAD7;
+ border-top: 0;
+ background: #f5fafa url(images/bullet2.gif) no-repeat;
+ font: bold 20px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+ color: #797268;
+}
+
+body td{ font-size:11px;}
+</style>
+<body>
+<table id="mytable" cellspacing="0" summary="The technical specifications of the Apple PowerMac G5 series">
+<caption> </caption>
+  <tr>
+    <th scope="col" >学生编号</th>
+
+    <th scope="col" >学生编号</th>
+    <th scope="col" >学生专业</th>
+    <th scope="col" >教师编号</th>
+	  <th scope="col" >教师姓名</th>
+
+    <th scope="col" >学生上课时段</th>
+	<th scope="col" >学生上课时间</th>
+    <th scope="col" >学生周数</th>
+    <th scope="col" >学生上课地点</th>
+  </tr>
+	
+    {% for item in student_items %}
+  <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+    
+    <th scope="row" abbr="Model" class="spec">{{ item[0] }}</th>
+    
+  
+     <td>{{ item[1] }}</td>
+     <td>{{ item[2] }}</td>
+     <td>{{ item[3] }}</td>
+     <td>{{ item[4] }}</td>
+     <td>{{ item[5] }}</td>
+     <td>{{ item[6] }}</td>
+     <td>{{ item[7] }}</td>
+     <td>{{ item[8] }}</td>
+    </tr>
+    {% end %} 
+
+</table>
+
+</body>
+</table>
+</html>
+
